@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build:ts": "tsc",
+    "build:scss": "sass src/scss:dist/css",
+    "build": "npm run build:ts && npm run build:scss",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "sass": "^1.83.1",
     "typescript": "^5.7.3"
   }
 }
