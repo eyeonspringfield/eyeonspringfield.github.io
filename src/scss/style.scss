@@ -2,16 +2,78 @@
   font-family: "Roboto", sans-serif;
 }
 
-#main-container{
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: white;
+}
+
+nav {
+  background-color: #232323;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .nav-element {
+    display: flex;
+    padding: 10px 0;
+    margin: 0 15px;
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 15px;
+    transition: 150ms;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background-color: #333;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    &:active {
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+
+      span{
+        display: block;
+      }
+    }
+
+    .active {
+      color: #33ff33;
+      font-weight: bold;
+    }
+  }
+}
+
+footer{
+  color: #323232;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 15px;
+}
+
+#main-container { // temporary
+  padding-top: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 95vh;
-
-  #hello-world-container {
-    justify-content: center;
-    align-items: center;
-
-  }
 }
