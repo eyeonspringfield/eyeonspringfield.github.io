@@ -6,7 +6,8 @@
   "scripts": {
     "build:ts": "tsc",
     "build:scss": "sass src/scss:dist/css",
-    "build": "npm run build:ts && npm run build:scss",
+    "copy:html": "cp src/html/*.html dist/",
+    "build": "npm run build:ts && npm run build:scss && npm run copy:html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
