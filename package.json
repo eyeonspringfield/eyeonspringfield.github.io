@@ -7,7 +7,8 @@
     "build:ts": "tsc",
     "build:scss": "sass src/scss:dist/css",
     "copy:html": "cp src/html/*.html dist/",
-    "build": "npm run build:ts && npm run build:scss && npm run copy:html",
+    "copy:favicon": "cp favicon.ico dist/",
+    "build": "npm run build:ts && npm run build:scss && npm run copy:html && npm run copy:favicon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
