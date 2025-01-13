@@ -5,8 +5,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: #000;
+  background: linear-gradient(45deg, #000000, #1e1e1e, #33ff33);
   color: white;
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease-in-out infinite;
 }
 
 nav {
@@ -60,15 +62,16 @@ nav {
     .active {
       color: #33ff33;
       font-weight: bold;
+      text-shadow: 0 0 3px #33ff33;
     }
   }
 }
 
 footer{
   color: #323232;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 #main-container { // temporary
@@ -77,4 +80,28 @@ footer{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 95vh;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 80% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }

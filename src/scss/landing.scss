@@ -1,3 +1,5 @@
+@use 'style';
+
 #main-container{
   padding-top: 70px;
   display: flex;
@@ -5,8 +7,33 @@
   justify-content: center;
   align-items: center;
 
+  .fade{
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+
+    &:nth-of-type(1){
+      animation-delay: 2.3s;
+    }
+
+    &:nth-of-type(2){
+      animation-delay: 2.5s;
+    }
+
+    &:nth-of-type(3){
+      animation-delay: 2.7s;
+    }
+
+    a{
+      color: #33ff33;
+
+      &:hover{
+        color: #9aff9a;
+      }
+    }
+  }
+
   #hello-world-container {
-    p {
+    #hello-world {
       display: inline-block;
       white-space: nowrap;
       overflow: hidden;
@@ -16,6 +43,9 @@
       font-size: 75px;
       color: #33ff33; // Apple II console color :D
       font-family: "Space Mono", serif;
+      text-shadow:
+              0 0 3px #33ff33,
+              0 0 6px #33ff33;
     }
 
     @keyframes typing {
@@ -30,16 +60,6 @@
     @keyframes blink-caret {
       50% {
         border-color: transparent;
-      }
-    }
-  }
-
-  p{
-    a{
-      color: #33ff33;
-
-      &:hover{
-        color: #9aff9a;
       }
     }
   }
