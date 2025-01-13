@@ -75,12 +75,10 @@ footer{
 }
 
 #main-container { // temporary
-  padding-top: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 95vh;
 }
 
 @keyframes fadeInUp {
