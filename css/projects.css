@@ -98,5 +98,64 @@ footer {
     background-position: 0 50%;
   }
 }
+#main-container {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
 
-/*# sourceMappingURL=style.css.map */
+#repositories-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+#repositories-container .animating {
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+#repositories-container .repo-card {
+  opacity: 0;
+  background-color: #e6e6e6;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.05s ease-in-out, transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+#repositories-container .repo-card:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
+#repositories-container h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #333;
+  background-color: black;
+}
+#repositories-container a {
+  color: #33ff33;
+  text-decoration: none;
+  font-family: "Space Mono", serif;
+  transition: text-shadow 0.1s ease-in-out, text-decoration 0.1s ease-in-out;
+}
+#repositories-container a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 3px #33ff33;
+}
+#repositories-container p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+#repositories-container strong {
+  color: #333;
+}
+
+/*# sourceMappingURL=projects.css.map */
