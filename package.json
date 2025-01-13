@@ -6,15 +6,18 @@
   "scripts": {
     "build:ts": "tsc",
     "build:scss": "sass src/scss:dist/css",
+    "build:obfuscatejs": "node scripts/obfuscate.js",
+    "delete:jsclean": "rm -rf jsclean",
     "copy:html": "cp src/html/*.html dist/",
     "copy:favicon": "cp favicon.ico dist/",
-    "build": "npm run build:ts && npm run build:scss && npm run copy:html && npm run copy:favicon",
+    "build": "npm run build:ts && npm run build:scss && npm run build:obfuscatejs && npm run delete:jsclean && npm run copy:html && npm run copy:favicon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "javascript-obfuscator": "^4.1.1",
     "sass": "^1.83.1",
     "typescript": "^5.7.3"
   }
