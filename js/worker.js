@@ -1,16 +1,82 @@
-"use strict";
-self.onmessage = function (event) {
-    const { mouseX, mouseY, cardsData } = event.data;
-    const boxShadows = cardsData.map((cardRect) => {
-        const cardCenterX = cardRect.left + cardRect.width / 2;
-        const cardCenterY = cardRect.top + cardRect.height / 2;
-        const distanceX = mouseX - cardCenterX;
-        const distanceY = mouseY - cardCenterY;
-        const distance = Math.sqrt(Math.pow(distanceX, 2) + Math.pow(distanceY, 2));
-        const maxDistance = 250;
-        const glowIntensity = Math.max(0, Math.min(1, 1 - distance / maxDistance));
-        const shadowStrength = glowIntensity * 50;
-        return `${distanceX / 10}px ${distanceY / 10}px ${shadowStrength}px rgba(0, 255, 0, ${glowIntensity})`;
-    });
-    postMessage({ boxShadows });
+'use strict';
+const _0xfe8460 = _0x2d8a;
+(function (_0x1a0d3b, _0x474579) {
+    const _0x19b322 = _0x2d8a, _0x4e9c56 = _0x1a0d3b();
+    while (!![]) {
+        try {
+            const _0x5b0673 = parseInt(_0x19b322(0x155)) / 0x1 * (parseInt(_0x19b322(0x157)) / 0x2) + parseInt(_0x19b322(0x162)) / 0x3 + -parseInt(_0x19b322(0x158)) / 0x4 + parseInt(_0x19b322(0x15a)) / 0x5 * (-parseInt(_0x19b322(0x14f)) / 0x6) + -parseInt(_0x19b322(0x151)) / 0x7 + -parseInt(_0x19b322(0x15d)) / 0x8 + -parseInt(_0x19b322(0x159)) / 0x9 * (-parseInt(_0x19b322(0x14e)) / 0xa);
+            if (_0x5b0673 === _0x474579)
+                break;
+            else
+                _0x4e9c56['push'](_0x4e9c56['shift']());
+        } catch (_0x223426) {
+            _0x4e9c56['push'](_0x4e9c56['shift']());
+        }
+    }
+}(_0x3bc2, 0x31b57));
+function _0x3bc2() {
+    const _0x311cd7 = [
+        'width',
+        'px\x20',
+        'map',
+        '8134130tbGXcc',
+        '144390CnRFub',
+        'height',
+        '2136925Xitfsd',
+        'pjZhJ',
+        'left',
+        'sqrt',
+        '203779KkjRln',
+        'top',
+        '2USPKhw',
+        '389816qZDwEL',
+        '9nikKtk',
+        '40xnlMhq',
+        'min',
+        'JgGGk',
+        '2606104KGVUzx',
+        'grUgD',
+        'yEQxb',
+        'pow',
+        'data',
+        '322281cmoycO',
+        'onmessage',
+        'px\x20rgba(0,\x20255,\x200,\x20'
+    ];
+    _0x3bc2 = function () {
+        return _0x311cd7;
+    };
+    return _0x3bc2();
+}
+function _0x2d8a(_0x39eb80, _0x3310d9) {
+    const _0x3bc20e = _0x3bc2();
+    return _0x2d8a = function (_0x2d8aec, _0x50b98f) {
+        _0x2d8aec = _0x2d8aec - 0x14d;
+        let _0x5a7572 = _0x3bc20e[_0x2d8aec];
+        return _0x5a7572;
+    }, _0x2d8a(_0x39eb80, _0x3310d9);
+}
+self[_0xfe8460(0x163)] = function (_0x177183) {
+    const _0x66cecb = _0xfe8460, _0xeb01c3 = {
+            'yEQxb': function (_0x4f73bb, _0x419b8e) {
+                return _0x4f73bb + _0x419b8e;
+            },
+            'pjZhJ': function (_0x544e26, _0x3242a5) {
+                return _0x544e26 / _0x3242a5;
+            },
+            'JgGGk': function (_0xab7581, _0x369213) {
+                return _0xab7581 + _0x369213;
+            },
+            'grUgD': function (_0x571d20, _0x55ea02) {
+                return _0x571d20 - _0x55ea02;
+            }
+        }, {
+            mouseX: _0x2b7423,
+            mouseY: _0x573ac0,
+            cardsData: _0x1772d1
+        } = _0x177183[_0x66cecb(0x161)], _0x3f7f0a = _0x1772d1[_0x66cecb(0x14d)](_0x5b765e => {
+            const _0x211966 = _0x66cecb, _0x4f48e4 = _0xeb01c3[_0x211966(0x15f)](_0x5b765e[_0x211966(0x153)], _0xeb01c3['pjZhJ'](_0x5b765e[_0x211966(0x165)], 0x2)), _0x3829cd = _0xeb01c3[_0x211966(0x15c)](_0x5b765e[_0x211966(0x156)], _0xeb01c3[_0x211966(0x152)](_0x5b765e[_0x211966(0x150)], 0x2)), _0x56fcd2 = _0x2b7423 - _0x4f48e4, _0x59e29a = _0xeb01c3[_0x211966(0x15e)](_0x573ac0, _0x3829cd), _0x304754 = Math[_0x211966(0x154)](_0xeb01c3['JgGGk'](Math[_0x211966(0x160)](_0x56fcd2, 0x2), Math[_0x211966(0x160)](_0x59e29a, 0x2))), _0x540489 = 0xfa, _0x29a0b4 = Math['max'](0x0, Math[_0x211966(0x15b)](0x1, 0x1 - _0xeb01c3[_0x211966(0x152)](_0x304754, _0x540489))), _0x205a68 = _0x29a0b4 * 0x32;
+            return _0xeb01c3[_0x211966(0x152)](_0x56fcd2, 0xa) + _0x211966(0x166) + _0xeb01c3[_0x211966(0x152)](_0x59e29a, 0xa) + _0x211966(0x166) + _0x205a68 + _0x211966(0x164) + _0x29a0b4 + ')';
+        });
+    postMessage({ 'boxShadows': _0x3f7f0a });
 };
