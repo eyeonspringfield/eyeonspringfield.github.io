@@ -11,14 +11,16 @@
           rel="stylesheet">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=visibility"/>
+    <script src="https://kit.fontawesome.com/2abfbc294a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
     <script src="js/app.js"></script>
 </head>
 <body>
 <nav>
     <div id="navbar-container">
         <div class="nav-element" onclick="location.href='index.html'">
-            <a href="index.html">
+            <a id="eye" href="index.html">
                 <span class="material-symbols-outlined">visibility</span>
             </a>
         </div>
@@ -29,9 +31,34 @@
 </nav>
 
 <div id="main-container">
-    <p>coming soon...</p>
+    <p class="fade">if you would like to get in touch, feel free to use the following contact methods:</p>
+    <div id="contact-info">
+        <p class="fade">
+            <a href="#" id="email-icon" title="Copy email to clipboard" onclick="navigator.clipboard.writeText('mcsorgouniversity@gmail.com');document.getElementById('copy-success').setAttribute('display', 'block')">
+                <i class="fa-solid fa-envelope"></i>
+                mcsorgouniversity&#64;gmail.com
+            </a>
+        </p>
+        <p class="fade">
+            <a href="https://www.linkedin.com/in/markcsorgo" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin"></i>
+                Mark Csorgo
+            </a>
+        </p>
 
-    <footer>Made by Mark Csorgo.</footer>
+        <p class="fade">please feel free to check out my GitHub profile aswell:</p>
+
+        <p class="fade">
+            <a href="https://github.com/eyeonspringfield" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+                eyeonspringfield
+            </a>
+        </p>
+    </div>
+    <span id="copy-success" style="display: none; color: #33ff33; font-size: 14px;">Email copied to clipboard!</span>
+    <p class="fade">i also do freelance web development, if you are interested, please feel free to contact me through my email or Linkedin.</p>
+
+    <footer>made by mark csorgo.</footer>
 </div>
 </body>
 </html>
