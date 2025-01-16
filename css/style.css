@@ -5,12 +5,47 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(45deg, #000000, #1e1e1e, #33ff33);
-  color: white;
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease-in-out infinite;
+  background: #000;
+  min-height: 90vh;
+  overflow: hidden;
 }
 
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png") repeat;
+  background-size: 2000px 2000px;
+  z-index: -2;
+  animation: moveStars 250s linear infinite;
+}
+
+.twinkling {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  z-index: -1;
+  animation: moveTwinkling 500s linear infinite;
+}
+
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
+@keyframes moveTwinkling {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
 nav {
   background-color: #232323;
   padding: 10px 0;
@@ -83,17 +118,6 @@ footer {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 80% 50%;
-  }
-  100% {
-    background-position: 0 50%;
   }
 }
 
