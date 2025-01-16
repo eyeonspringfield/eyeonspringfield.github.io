@@ -1,0 +1,77 @@
+@use "style";
+
+#main-container{
+  height: 100vh;
+  margin-top: 20px;
+  > * {
+    animation: fadeInUp 0.6s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  #selections{
+    animation-delay: 0.2s;
+
+    button{
+      margin: 15px;
+      color: #33ff33;
+      border: none;
+      padding: 8px 12px;
+      font-size: 1.1rem;
+      border-radius: 25px;
+      font-family: "Space Mono", serif;
+      background-color: rgba(50, 50, 50, 0.2);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      transition: all 0.1s ease-in-out;
+
+      &:hover{
+        background-color: rgba(100, 100, 100, 0.5);
+        cursor: pointer;
+      }
+      &:active{
+        background-color: rgba(100, 100, 100, 0.8);
+      }
+    }
+  }
+
+  #terminal{
+    height: 60%;
+    margin-top: 35px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(50, 50, 50, 0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    width: 80%;
+    position: relative;
+    animation: 0.4s fadeIn 0.8s ease-in forwards;
+
+    p{
+      color: #33ff33;
+      font-family: "Space Mono", serif;
+    }
+
+    #text{
+      margin-left: 10px;
+    }
+
+    #header{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0;
+      margin: 2px;
+      text-align: center;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

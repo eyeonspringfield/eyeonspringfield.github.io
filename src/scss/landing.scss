@@ -9,6 +9,7 @@
 
   .fade{
     opacity: 0;
+    color: white;
     animation: fadeInUp 1s ease-in-out forwards;
 
     &:nth-of-type(1){

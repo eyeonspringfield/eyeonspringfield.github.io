@@ -1,5 +1,9 @@
 @use 'style';
 
+body{
+  overflow: auto !important;
+}
+
 #main-container {
   padding-top: 70px;
   display: flex;
@@ -23,16 +27,17 @@
 
   .repo-card {
     opacity: 0;
-    background-color: #e6e6e6;
+    background-color: rgba(50, 50, 50, 0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.2);
     transition: box-shadow 0.05s ease-in-out, transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
     display: flex;
     flex-direction: column;
 
     &:hover{
-      background-color: #ffffff;
+      background-color: rgba(50, 50, 50, 0.5);
       transform: scale(1.05);
     }
   }
@@ -42,7 +47,6 @@
     margin-bottom: 10px;
     margin-top: 10px;
     color: #333;
-    background-color: black;
   }
 
   a{
@@ -52,7 +56,6 @@
     transition: text-shadow 0.1s ease-in-out, text-decoration 0.1s ease-in-out;
 
     &:hover{
-      text-decoration: underline;
       text-shadow: 0 0 3px #33ff33;
     }
   }

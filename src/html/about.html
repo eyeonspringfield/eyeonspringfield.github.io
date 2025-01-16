@@ -12,9 +12,15 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=visibility"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
     <script src="js/app.js"></script>
+    <script src="js/about.js"></script>
 </head>
 <body>
+
+<div class="stars"></div>
+<div class="twinkling"></div>
+
 <nav>
     <div id="navbar-container">
         <div class="nav-element" onclick="location.href='index.html'">
@@ -29,9 +35,22 @@
 </nav>
 
 <div id="main-container">
-    <p>coming soon...</p>
+    <div id="selections">
+        <button id="general-btn">general</button>
+        <button id="skills-btn">skills</button>
+        <button id="personal-btn">personal</button>
+        <button id="additional-btn">additional</button>
+    </div>
 
-    <footer>Made by Mark Csorgo.</footer>
+    <div id="terminal">
+        <p id="header">====== eye's terminal ======</p>
+        <div id="info-text">
+            <p id="top">> please choose a category.</p>
+            <div id="text"></div>
+        </div>
+    </div>
+
+    <footer>made by mark csorgo.</footer>
 </div>
 </body>
 </html>
